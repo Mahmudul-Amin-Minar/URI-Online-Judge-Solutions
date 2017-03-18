@@ -6,6 +6,5 @@ int main()
     scanf("%lf",&R);
     A=PI*R*R;
     printf("A=%.4lf\n",A);
-
     return 0;
 }
