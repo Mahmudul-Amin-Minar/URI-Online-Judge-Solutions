@@ -1,0 +1,37 @@
+#include<stdio.h>
+int main()
+{
+    float N1,N2,N3,N4,media1,media2,m_final,N5;
+    scanf("%f %f %f %f",&N1,&N2,&N3,&N4);
+    media1=((N1*2)+(N2*3)+(N3*4)+(N4*1))/(2+3+4+1);
+    printf("Media: %.1f\n",media1);
+    int m=media1;
+    switch(m)
+    {
+    case 10:
+    case 9:
+    case 8:
+    case 7:
+        printf("Aluno aprovado.\n");
+        break;
+    case 6:
+    case 5:
+        printf("Aluno em exame.\n");
+        scanf("%f",&N5);
+        printf("Nota do exame: %.1f\n",N5);
+        media2=(media1+N5)/2;
+        if(media2>=5.00){
+            printf("Aluno aprovado.\n");
+        }
+        else{
+            printf("Aluno reprovado.\n");
+        }
+        m_final=(media1+N5)/2;
+        printf("Media final: %.1f\n",m_final);
+        break;
+    case 4:
+        printf("Aluno reprovado.\n");
+        break;
+    }
+    return 0;
+}
